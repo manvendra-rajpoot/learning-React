@@ -1,18 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//stateless fuctional component
-//always return something
-// function Greeting(){
-//   return (
-//     <div>
-//       <h1>This is Manvendra Rajpoot</h1>
-//     </div>
-//   )
-// }
+//JSX RULES --->
+//return single element, div/section/article or fragment, 
+//use camelCase for html attribute, className instead for class
+//close every element
+//formatting
 
-const  Greeting = () => {
-  return React.createElement('div',{},React.createElement('h1',{},'This is Manu!'));
-};
+function Greeting(){
+  return (
+    <React.Fragment>
+      <h1>This is Manvendra Rajpoot</h1>
+      <div className="app">
+        <h5>Hi I am  Manvendra</h5>
+      </div>
+    </React.Fragment>
+  )
+}
+
+
 
 ReactDOM.render(<Greeting/>, document.getElementById('root'));
